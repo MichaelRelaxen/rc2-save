@@ -13,14 +13,16 @@
     // Game addresses
     #define savedata_info (*((void**)0x1410E50))
     #define savedata_buf (*(void**)((int)savedata_info + 4))
+	
+    #define autosave_instr (*((int*)0x10BABB4))
 
     // I/O addresses
+	#define api_autosave_toggle (*(char*)0x10CD71B)
 	#define api_autosave (*(char*)0x10CD71C)
     #define api_mod (*(char*)0x10CD71D)
     #define api_load (*(char*)0x10CD71E)
     #define api_setaside (*(char*)0x10CD71F)
     #define api_i (*((int*)0x10CD720))
-
     #define api_aside_buf ((void*)0x1C00000)
 
 #endif // RC2_SAVE_H

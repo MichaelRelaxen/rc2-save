@@ -27,11 +27,17 @@ void _start(void)
         api_load = 0;
     }
 	
+	// manual autosave.
 	if (api_autosave == 1) {
 		save_handler(AUTOSAVE); 
 		api_autosave = 0;
 	}
 	
-	return;
+	// disable/enable autosave toggle
+	if(api_autosave_toggle == 1) 
+		autosave_instr = 0x2F04FFFF;
+	else 
+		autosave_instr = 0x2F040003;
 	
+	return;
 }
