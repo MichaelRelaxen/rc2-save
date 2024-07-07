@@ -26,5 +26,12 @@ void _start(void)
         perform_load(0, api_aside_buf);
         api_load = 0;
     }
-    return;
+	
+	if (api_autosave == 1) {
+		save_handler(AUTOSAVE); 
+		api_autosave = 0;
+	}
+	
+	return;
+	
 }

@@ -18,7 +18,7 @@ p() {
 name="rc2-save"
 friendly_name="Savefile Helper"
 author="king_dedede"
-version="1.0"
+version="1.1"
 
 rm out/patch.txt
 echo "#- name: $friendly_name" >> out/patch.txt
